@@ -69,7 +69,9 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+    vi-mode
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -87,6 +89,8 @@ else
   export EDITOR='nvim'
 fi
 
+# Enable vi mode
+bindkey -v
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -120,16 +124,19 @@ php artisan ide-helper:meta &&
 php artisan ide-helper:models --nowrite"
 
 alias ls="exa --long --header --git --icons --group-directories-first"
-alias yo="open -a yoink"
 
-
-alias n="nvim"
+alias home="~"
 alias rm="trash"
+
+alias shutdown="sudo shutdown -h now"
+alias restart="sudo shutdown -r now"
 
 path+=('Applications/Postgres.app/Contents/Versions/latest/bin')
 path+=('/Users/sidspears/.yarn/bin')
 path+=('/Users/sidspears/.config/yarn/global/node_modules/.bin')
 export PATH
+
+export TERM=xterm-256color
 
 eval "$(starship init zsh)"
 

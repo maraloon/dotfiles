@@ -1,7 +1,6 @@
 vim.cmd [[packadd packer.nvim]]
 
-return require('packer').startup(function()
-  -- Packer can manage itself
+return require('packer').startup( function()
   use 'wbthomason/packer.nvim'
   use 'eddyekofo94/gruvbox-flat.nvim'
   use { "nvim-treesitter/nvim-treesitter", run = ':TSUpdate'}
@@ -13,7 +12,6 @@ return require('packer').startup(function()
   use {
     'kyazdani42/nvim-tree.lua',
     requires = { 'kyazdani42/nvim-web-devicons' },
-    config = function() require'nvim-tree'.setup {} end
   }
   use 'windwp/nvim-ts-autotag'
   use 'p00f/nvim-ts-rainbow'
@@ -23,6 +21,7 @@ return require('packer').startup(function()
     'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+  use 'nvim-telescope/telescope-project.nvim'
   use { 
     'hrsh7th/vim-vsnip',
     -- requires = { 'hrsh7th/vim-vsnip-integ' }
@@ -40,26 +39,18 @@ return require('packer').startup(function()
     requires = { 'nvim-lua/plenary.nvim' },
     tag = 'release' -- To use the latest release
   }
+  use 'akinsho/toggleterm.nvim'
+  use 'terrortylor/nvim-comment'
 
-  use { 
-    "nvim-neorg/neorg",
+  use {
+    'rmagatti/session-lens',
+    requires = {'rmagatti/auto-session', 'nvim-telescope/telescope.nvim'},
     config = function()
-        require('neorg').setup {
-            -- Tell Neorg what modules to load
-            load = {
-                ["core.defaults"] = {}, -- Load all the default modules
-                ["core.norg.concealer"] = {}, -- Allows for use of icons
-                ["core.norg.dirman"] = { -- Manage your directories with Neorg
-                    config = {
-                        workspaces = {
-                            my_workspace = "~/Documents/vim-bear/"
-                        }
-                    }
-                }
-            },
-        }
-    end,
-    requires = "nvim-lua/plenary.nvim"
+      require('session-lens').setup({--[[your custom config--]]})
+    end
   }
+  use "Pocco81/AutoSave.nvim"
+  use "Pocco81/TrueZen.nvim"
+  use "folke/twilight.nvim"
 
 end)

@@ -9,8 +9,11 @@ require('plugins.dashboard')
 require('plugins.telescope')
 require('plugins.cmp')
 require('plugins.lsp')
-require('plugins.colorizer') --not work without :ColorToggle
 require('plugins.gitsigns')
+require('plugins.toggleterm')
+require('plugins.nvim-comment')
+require('plugins.auto-sessions')
+require('plugins.autosave')
 
 vim.g.gruvbox_hide_inactive_statusline = true
 vim.cmd('colorscheme gruvbox-flat')

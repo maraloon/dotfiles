@@ -3,16 +3,17 @@ require('nvim-tree').setup({
   hijack_netrw        = true,
   open_on_setup       = true,
   ignore_ft_on_setup  = {},
-  auto_close          = false,
+  auto_close          = true,
   open_on_tab         = false,
-  hijack_cursor       = false,
-  update_cwd          = false,
+  hijack_cursor       = true,
+  update_cwd          = true,
   update_to_buf_dir   = {
     enable = true,
     auto_open = true,
   },
   diagnostics = {
-    enable = false,
+    enable = true,
+    show_on_dirs = true,
     icons = {
       hint = "",
       info = "",
@@ -21,7 +22,7 @@ require('nvim-tree').setup({
     }
   },
   update_focused_file = {
-    enable      = false,
+    enable      = true,
     update_cwd  = false,
     ignore_list = {}
   },
@@ -39,9 +40,9 @@ require('nvim-tree').setup({
     timeout = 500,
   },
   view = {
-    width = 25,
+    width = 30,
     height = 30,
-    hide_root_folder = false,
+    hide_root_folder = true,
     side = 'right',
     auto_resize = true,
     mappings = {
@@ -53,6 +54,6 @@ require('nvim-tree').setup({
   },
   trash = {
     cmd = "trash",
-    require_confirm = true
+    require_confirm = false
   }
 })
