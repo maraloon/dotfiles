@@ -27,10 +27,10 @@ map('n', '<down>', remove, options)
 map('n', '<left>', remove, options)
 map('n', '<right>', remove, options)
 
-map('i', '<BS>', remove, options)
+map('n', 'o', 'o<esc>', options)
+map('n', 'O', 'O<esc>', options)
 
-map('i', '<leader>r', '<c-^>', options)
-map('n', 'yu', ":let @* = expand('<cfile>')<cr>", options)
+map('n', 'yu', ":let @* = expand('<cfile>')<cr>", options) -- yank url
 map('n', '<leader>m', ":silent !open -a \"Marked 2.app\" '%:p'<cr>", options)
 
 map('n', '<leader>h', ':noh<cr>', options)
