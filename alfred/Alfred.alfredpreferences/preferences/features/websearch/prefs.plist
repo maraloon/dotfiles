@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>customSites</key>
+	<dict>
+		<key>32E4DC95-7762-4D42-ADDD-564CD9267B6B</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>првд</string>
+			<key>text</key>
+			<string>Русский -&gt; English</string>
+			<key>url</key>
+			<string>https://translate.google.com/?sl=ru&amp;tl=en&amp;op=translate&amp;text={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>5E96F17E-700D-4E63-BE0D-965B8F3E3D36</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>tr</string>
+			<key>text</key>
+			<string>English -&gt; Русский</string>
+			<key>url</key>
+			<string>https://translate.google.com/?sl=en&amp;tl=ru&amp;text={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>A6F1497B-B466-448E-AA41-57454B42D3EC</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>ya</string>
+			<key>text</key>
+			<string>Search yandex.ru for '{query}'</string>
+			<key>url</key>
+			<string>https://yandex.ru/search/?text={query}&amp;from=os</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>onlyShowEnabledInPrefs</key>
+	<true/>
+</dict>
+</plist>

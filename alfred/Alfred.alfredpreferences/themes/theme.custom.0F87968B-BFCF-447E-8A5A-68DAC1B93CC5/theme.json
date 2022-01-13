@@ -1,0 +1,63 @@
+{
+  "alfredtheme" : {
+    "result" : {
+      "textSpacing" : 5,
+      "subtext" : {
+        "size" : 11,
+        "colorSelected" : "#282828FF",
+        "font" : "FiraCode Nerd Font",
+        "color" : "#EBDAB2FF"
+      },
+      "shortcut" : {
+        "size" : 16,
+        "colorSelected" : "#282828FF",
+        "font" : "System",
+        "color" : "#B16286FF"
+      },
+      "backgroundSelected" : "#B16286FF",
+      "text" : {
+        "size" : 16,
+        "colorSelected" : "#282828FF",
+        "font" : "FiraCode Nerd Font",
+        "color" : "#EBDAB2FF"
+      },
+      "iconPaddingHorizontal" : 9,
+      "roundness" : 0,
+      "paddingVertical" : 5,
+      "iconSize" : 34
+    },
+    "separator" : {
+      "color" : "#CBCBCBF3",
+      "thickness" : 0
+    },
+    "search" : {
+      "backgroundSelected" : "#480069E4",
+      "paddingHorizontal" : 8,
+      "spacing" : 8,
+      "text" : {
+        "size" : 18,
+        "colorSelected" : "#FFFFFFFF",
+        "font" : "FiraCode Nerd Font",
+        "color" : "#EBDAB2FF"
+      },
+      "background" : "#282828FF",
+      "roundness" : 0,
+      "paddingVertical" : 5
+    },
+    "scrollbar" : {
+      "color" : "#2B2714FF",
+      "thickness" : 2
+    },
+    "name" : "gruvbox",
+    "window" : {
+      "color" : "#282828FF",
+      "paddingHorizontal" : 22,
+      "width" : 573,
+      "borderPadding" : 0,
+      "borderColor" : "#0000007F",
+      "blur" : 15,
+      "roundness" : 3,
+      "paddingVertical" : 12
+    }
+  }
+}
