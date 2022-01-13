@@ -5,9 +5,9 @@ local remove = '<nop>'
 
 vim.g.mapleader = ';'
 
-map('i', 'kj', '<esc>', options)
-map('v', 'kj', '<esc>', options)
-map('t', 'kj', '<esc>', options)
+-- map('i', 'kj', '<esc>', options)
+-- map('v', 'kj', '<esc>', options)
+-- map('t', 'kj', '<esc>', options)
 
 -- todo: install easymotion and maybe disable hjkl or set it to jkl;
 

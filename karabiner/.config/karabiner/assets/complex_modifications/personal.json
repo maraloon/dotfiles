@@ -1,0 +1,350 @@
+{
+  "title": "maraloon's vim-like keymapping",
+  "rules": [
+    {
+        "description": "dissable cmd-Q",
+        "manipulators": [
+            {
+                "from": {
+                    "key_code": "q",
+                    "modifiers": {
+                        "mandatory": [
+                            "command"
+                        ]
+                    }
+                },
+                "to": [],
+                "type": "basic"
+            }
+        ]
+    },
+    {
+        "description": " alone left_shift - en, right_shift - ru",
+        "manipulators": [
+            {
+                "from": {
+                    "key_code": "left_shift"
+                },
+                "to_if_alone": [
+                    {
+                        "select_input_source": {
+                            "language": "en"
+                        }
+                    }
+                ],
+                "type": "basic"
+            },
+            {
+                "from": {
+                    "key_code": "right_shift"
+                },
+                "to_if_alone": [
+                    {
+                        "select_input_source": {
+                            "language": "ru"
+                        }
+                    }
+                ],
+                "type": "basic"
+            }
+        ]
+    },
+    {
+        "description": "Move left_shift to spacebar",
+        "manipulators": [
+            {
+                "from": {
+                    "key_code": "spacebar"
+                },
+                "to": [
+                    {
+                        "key_code": "left_shift"
+                    }
+                ],
+                "to_if_alone": [
+                    {
+                        "key_code": "spacebar"
+                    }
+                ],
+                "type": "basic"
+            },
+            {
+                "from": {
+                    "key_code": "left_shift"
+                },
+                "to": [],
+                "type": "basic"
+            }
+        ]
+    },
+    {
+        "description": "caps_lock to left_control on hold",
+        "manipulators": [
+            {
+                "from": {
+                    "key_code": "caps_lock"
+                },
+                "to": [
+                    {
+                        "key_code": "left_control"
+                    }
+                ],
+                "to_if_alone": [],
+                "type": "basic"
+            }
+        ]
+    },
+    {
+        "description": "Move Tab to left_control+i",
+        "manipulators": [
+            {
+                "from": {
+                    "key_code": "i",
+                    "modifiers": {
+                        "mandatory": [
+                            "left_control"
+                        ]
+                    }
+                },
+                "to": [
+                    {
+                        "key_code": "tab"
+                    }
+                ],
+                "type": "basic"
+            },
+            {
+                "from": {
+                    "key_code": "tab"
+                },
+                "to": [],
+                "type": "basic"
+            }
+        ]
+    },
+    {
+        "description": "Move Esc to left_control+[",
+        "manipulators": [
+            {
+                "from": {
+                    "key_code": "[",
+                    "modifiers": {
+                        "mandatory": [
+                            "left_control"
+                        ]
+                    }
+                },
+                "to": [
+                    {
+                        "key_code": "escape"
+                    }
+                ],
+                "type": "basic"
+            },
+            {
+                "from": {
+                    "key_code": "escape"
+                },
+                "to": [],
+                "type": "basic"
+            }
+        ]
+    },
+    {
+        "description": "Move Backspace to left_control+h",
+        "manipulators": [
+            {
+                "from": {
+                    "key_code": "h",
+                    "modifiers": {
+                        "mandatory": [
+                            "left_control"
+                        ]
+                    }
+                },
+                "to": [
+                    {
+                        "key_code": "delete_or_backspace"
+                    }
+                ],
+                "type": "basic"
+            },
+            {
+                "from": {
+                    "key_code": "delete_or_backspace"
+                },
+                "to": [],
+                "type": "basic"
+            }
+        ]
+    },
+    {
+        "description": "Move Delete to left_control+l",
+        "manipulators": [
+            {
+                "from": {
+                    "key_code": "l",
+                    "modifiers": {
+                        "mandatory": [
+                            "left_control"
+                        ]
+                    }
+                },
+                "to": [
+                    {
+                        "key_code": "delete_forward"
+                    }
+                ],
+                "type": "basic"
+            },
+            {
+                "from": {
+                    "key_code": "delete_forward"
+                },
+                "to": [],
+                "type": "basic"
+            }
+        ]
+    },
+    {
+        "description": "Move Enter to left_control+m",
+        "manipulators": [
+            {
+                "from": {
+                    "key_code": "m",
+                    "modifiers": {
+                        "mandatory": [
+                            "left_control"
+                        ],
+                        "optional": [
+                            "any"
+                        ]
+                    }
+                },
+                "to": [
+                    {
+                        "key_code": "return_or_enter"
+                    }
+                ],
+                "type": "basic"
+            },
+            {
+                "from": {
+                    "key_code": "return_or_enter"
+                },
+                "to": [],
+                "type": "basic"
+            }
+        ]
+    },
+    {
+        "description": "Move arrows to left_command+hjkl",
+        "manipulators": [
+            {
+                "from": {
+                    "key_code": "h",
+                    "modifiers": {
+                        "mandatory": [
+                            "left_command"
+                        ],
+                        "optional": [
+                            "any"
+                        ]
+                    }
+                },
+                "to": [
+                    {
+                        "key_code": "left_arrow"
+                    }
+                ],
+                "type": "basic"
+            },
+            {
+                "from": {
+                    "key_code": "j",
+                    "modifiers": {
+                        "mandatory": [
+                            "left_command"
+                        ],
+                        "optional": [
+                            "any"
+                        ]
+                    }
+                },
+                "to": [
+                    {
+                        "key_code": "down_arrow"
+                    }
+                ],
+                "type": "basic"
+            },
+            {
+                "from": {
+                    "key_code": "k",
+                    "modifiers": {
+                        "mandatory": [
+                            "left_command"
+                        ],
+                        "optional": [
+                            "any"
+                        ]
+                    }
+                },
+                "to": [
+                    {
+                        "key_code": "up_arrow"
+                    }
+                ],
+                "type": "basic"
+            },
+            {
+                "from": {
+                    "key_code": "l",
+                    "modifiers": {
+                        "mandatory": [
+                            "left_command"
+                        ],
+                        "optional": [
+                            "any"
+                        ]
+                    }
+                },
+                "to": [
+                    {
+                        "key_code": "right_arrow"
+                    }
+                ],
+                "type": "basic"
+            },
+            {
+                "from": {
+                    "key_code": "left_arrow"
+                },
+                "to": [],
+                "type": "basic"
+            },
+            {
+                "from": {
+                    "key_code": "right_arrow"
+                },
+                "to": [],
+                "type": "basic"
+            },
+            {
+                "from": {
+                    "key_code": "up_arrow"
+                },
+                "to": [],
+                "type": "basic"
+            },
+            {
+                "from": {
+                    "key_code": "down_arrow"
+                },
+                "to": [],
+                "type": "basic"
+            }
+        ]
+    }
+  ]
+}
