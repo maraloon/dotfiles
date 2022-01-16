@@ -119,6 +119,12 @@ _G.packer_plugins = {
     path = "/Users/sidspears/.local/share/nvim/site/pack/packer/start/gruvbox-flat.nvim",
     url = "https://github.com/eddyekofo94/gruvbox-flat.nvim"
   },
+  ["hop.nvim"] = {
+    config = { "\27LJ\2\n]\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\2\rquit_key\6q\tkeys\25fjdkslacmrieowxzqpty\nsetup\bhop\frequire\0" },
+    loaded = true,
+    path = "/Users/sidspears/.local/share/nvim/site/pack/packer/start/hop.nvim",
+    url = "https://github.com/phaazon/hop.nvim"
+  },
   ["lspkind-nvim"] = {
     loaded = true,
     path = "/Users/sidspears/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
@@ -195,11 +201,6 @@ _G.packer_plugins = {
     path = "/Users/sidspears/.local/share/nvim/site/pack/packer/start/session-lens",
     url = "https://github.com/rmagatti/session-lens"
   },
-  ["telescope-project.nvim"] = {
-    loaded = true,
-    path = "/Users/sidspears/.local/share/nvim/site/pack/packer/start/telescope-project.nvim",
-    url = "https://github.com/nvim-telescope/telescope-project.nvim"
-  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/sidspears/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -228,6 +229,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: hop.nvim
+time([[Config for hop.nvim]], true)
+try_loadstring("\27LJ\2\n]\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\2\rquit_key\6q\tkeys\25fjdkslacmrieowxzqpty\nsetup\bhop\frequire\0", "config", "hop.nvim")
+time([[Config for hop.nvim]], false)
 -- Config for: session-lens
 time([[Config for session-lens]], true)
 try_loadstring("\27LJ\2\n>\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\17session-lens\frequire\0", "config", "session-lens")

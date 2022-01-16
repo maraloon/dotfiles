@@ -21,7 +21,6 @@ return require('packer').startup( function()
     'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
-  use 'nvim-telescope/telescope-project.nvim'
   use { 
     'hrsh7th/vim-vsnip',
     -- requires = { 'hrsh7th/vim-vsnip-integ' }
@@ -52,5 +51,12 @@ return require('packer').startup( function()
   use "Pocco81/AutoSave.nvim"
   use "Pocco81/TrueZen.nvim"
   use "folke/twilight.nvim"
+  use {
+    'phaazon/hop.nvim',
+    branch = 'v1', -- optional but strongly recommended
+    config = function()
+      require'hop'.setup { keys = 'fjdkslacmrieowxzqpty', quit_key = 'q' }
+    end
+  }
 
 end)

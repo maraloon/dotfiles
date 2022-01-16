@@ -5,11 +5,12 @@ local remove = '<nop>'
 
 vim.g.mapleader = ';'
 
--- map('i', 'kj', '<esc>', options)
--- map('v', 'kj', '<esc>', options)
--- map('t', 'kj', '<esc>', options)
-
--- todo: install easymotion and maybe disable hjkl or set it to jkl;
+map('i', 'kj', '<esc>', options)
+map('v', 'kj', '<esc>', options)
+map('t', 'kj', '<esc>', options)
+-- map('i', '<leader>e', '<esc>', options)
+-- map('v', '<leader>e', '<esc>', options)
+-- map('t', '<leader>e', '<esc>', options)
 
 --map('n', '<c-h>', '<c-w>h', options)
 --map('n', '<c-j>', '<c-w>j', options)
@@ -27,8 +28,27 @@ map('n', '<down>', remove, options)
 map('n', '<left>', remove, options)
 map('n', '<right>', remove, options)
 
+-- map('n', 'j', '+', options)
+-- map('n', 'k', '-', options)
+-- map('n', 'h', '^', options)
+-- map('n', 'l', '$', options)
+map('n', 'h', remove, options)
+map('n', 'j', remove, options)
+map('n', 'k', remove, options)
+map('n', 'l', remove, options)
+
+map('n', "''", '``', options) -- jump to prev cursor position
+
 map('n', 'o', 'o<esc>', options)
 map('n', 'O', 'O<esc>', options)
+
+map('o', 'w', 'iw', options)
+map('o', '(', 'i(', options)
+map('o', '[', 'i[', options)
+map('o', '{', 'i{', options)
+map('o', '"', 'i"', options)
+map('o', "'", "i'", options)
+map('o', '<', 'i<', options)
 
 map('n', 'yu', ":let @* = expand('<cfile>')<cr>", options) -- yank url
 map('n', '<leader>m', ":silent !open -a \"Marked 2.app\" '%:p'<cr>", options)
@@ -72,3 +92,16 @@ map('n', '<leader>ct', ':ColorizerToggle<cr>', options)
 
 map('n', '<leader>za', ':TZAtaraxis<cr>', options)
 map('n', '<leader>zm', ':TZMinimalist<cr>', options)
+
+-- Hop
+map('', 'F', remove, options)
+map('', 't', remove, options)
+map('', 'T', remove, options)
+map('', 'f', "<cmd>lua require'hop'.hint_char1({ current_line_only = true })<cr>", {})
+
+map('n', 'j', ':HopWord<cr>', options)
+map('n', 'l', ':HopLine<cr>', options)
+map('n', 'F', ':HopChar1<cr>', options)
+-- map('n', 'jh', ':HopChar2<cr>', options)
+map('n', '/', remove, options)
+map('n', '/', ':HopPattern<cr>', options)
