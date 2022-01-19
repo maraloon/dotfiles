@@ -41,13 +41,6 @@ return require('packer').startup( function()
   use 'akinsho/toggleterm.nvim'
   use 'terrortylor/nvim-comment'
 
-  use {
-    'rmagatti/session-lens',
-    requires = {'rmagatti/auto-session', 'nvim-telescope/telescope.nvim'},
-    config = function()
-      require('session-lens').setup({--[[your custom config--]]})
-    end
-  }
   use "Pocco81/AutoSave.nvim"
   use "Pocco81/TrueZen.nvim"
   use "folke/twilight.nvim"
@@ -55,7 +48,7 @@ return require('packer').startup( function()
     'phaazon/hop.nvim',
     branch = 'v1', -- optional but strongly recommended
     config = function()
-      require'hop'.setup { keys = 'fjdkslacmrieowxzqpty', quit_key = 'q' }
+      require'hop'.setup { keys = 'fjdkslacmrieowxzpty', quit_key = 'q' }
     end
   }
 

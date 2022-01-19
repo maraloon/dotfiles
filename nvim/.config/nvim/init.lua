@@ -12,7 +12,6 @@ require('plugins.lsp')
 require('plugins.gitsigns')
 require('plugins.toggleterm')
 require('plugins.nvim-comment')
-require('plugins.auto-sessions')
 require('plugins.autosave')
 
 vim.g.gruvbox_hide_inactive_statusline = true

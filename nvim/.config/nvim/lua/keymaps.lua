@@ -57,10 +57,6 @@ map('n', '<leader>fg', ':Telescope git_files<cr>', options)
 map('n', '<leader>fr', ':Telescope resume<cr>', options)
 map('n', '<leader>f/', ':Telescope current_buffer_fuzzy_find<cr>', options)
 
--- DELETE PLUGIN
-map('n', '<leader>ss', ':SearchSession<cr>', options)
-map('n', '<leader>sl', ':RestoreSession<cr>', options)
-
 map('n', '<leader>ct', ':ColorizerToggle<cr>', options)
 
 map('n', '<leader>za', ':TZAtaraxis<cr>', options)
