@@ -22,10 +22,6 @@ vim.opt.splitbelow = true
 vim.opt.updatetime = 100
 vim.opt.showmode = false
 
-vim.opt.keymap = 'russian-jcukenwin'
-vim.opt.iminsert = 0
-vim.opt.imsearch = 0
-
 vim.cmd[[
 filetype indent plugin on
 syntax enable

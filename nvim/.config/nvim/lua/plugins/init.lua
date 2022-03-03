@@ -3,12 +3,16 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup( function()
   use 'wbthomason/packer.nvim'
   use 'eddyekofo94/gruvbox-flat.nvim'
+  use 'KabbAmine/yowish.vim'
+  use 'sainnhe/everforest'
+  use 'blueshirts/darcula'
   use { "nvim-treesitter/nvim-treesitter", run = ':TSUpdate'}
   use {
     'nvim-lualine/lualine.nvim',
     requires = {'kyazdani42/nvim-web-devicons', opt = true}
   }
   use 'norcalli/nvim-colorizer.lua'
+  use { 'ms-jpq/chadtree' }
   use {
     'kyazdani42/nvim-tree.lua',
     requires = { 'kyazdani42/nvim-web-devicons' },
@@ -21,11 +25,13 @@ return require('packer').startup( function()
     'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
-  use { 
-    'hrsh7th/vim-vsnip',
-    -- requires = { 'hrsh7th/vim-vsnip-integ' }
-  }
-  use 'hrsh7th/vim-vsnip-integ'
+  use 'SirVer/ultisnips'
+  use 'honza/vim-snippets'
+  -- use { 
+  --   'hrsh7th/vim-vsnip',
+  --   -- requires = { 'hrsh7th/vim-vsnip-integ' }
+  -- }
+  -- use 'hrsh7th/vim-vsnip-integ'
   use 'neovim/nvim-lspconfig'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
@@ -51,5 +57,9 @@ return require('packer').startup( function()
       require'hop'.setup { keys = 'fjdkslacmrieowxzpty', quit_key = 'q' }
     end
   }
-
+  use {
+    'glacambre/firenvim',
+    run = function() vim.fn['firenvim#install'](0) end 
+  }
+  use { 'metakirby5/codi.vim' }
 end)

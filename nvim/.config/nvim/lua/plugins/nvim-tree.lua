@@ -1,11 +1,14 @@
-vim.g.nvim_tree_quit_on_open = 1
-
 require('nvim-tree').setup({
+  actions = {
+    open_file = {
+      quit_on_open = true,
+    },
+  },
   disable_netrw       = true,
   hijack_netrw        = true,
   open_on_setup       = true,
   ignore_ft_on_setup  = {},
-  auto_close          = true,
+  auto_close          = false,
   open_on_tab         = false,
   hijack_cursor       = true,
   update_cwd          = true,
@@ -49,13 +52,15 @@ require('nvim-tree').setup({
     auto_resize = true,
     mappings = {
       custom_only = false,
-      list = {}
+      list = {
+        {key = "<Esc>", action = "cd"}
+      }
     },
     number = false,
     relativenumber = false
   },
   trash = {
     cmd = "trash",
-    require_confirm = false
+    require_confirm = true
   }
 })

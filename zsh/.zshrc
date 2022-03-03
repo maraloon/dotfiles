@@ -49,7 +49,7 @@ DISABLE_UPDATE_PROMPT="true"
 COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
+# under VCS as dirty. This makes repository status check for laggrepe repositories
 # much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
@@ -126,7 +126,6 @@ php artisan ide-helper:models --nowrite"
 alias ls="exa --long --header --git --icons --group-directories-first"
 
 alias home="~"
-alias rm="trash"
 
 alias shutdown="sudo shutdown -h now"
 alias restart="sudo shutdown -r now"

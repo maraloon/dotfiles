@@ -26,8 +26,7 @@ map('v', 'kj', '<esc>', options)
 map('t', 'kj', '<c-\\><c-n>', options)
 
 map('n', '<leader>q', ':q<cr>', options)
-
-map('n', "''", '``', options) -- jump to prev cursor position
+map('n', 'gb', ':e #<cr>', options) -- switch to prev file
 
 map('o', 'w', 'iw', options)
 map('o', '(', 'i(', options)
@@ -44,11 +43,16 @@ map('n', '<leader>h', ':noh<cr>', options)
 
 ---- Plugins
 map('n', '<leader>n', ':NvimTreeToggle<cr>', options)
+map('n', '<leader>c', ':CHADopen<cr>', options)
 map('n', '<leader>t', ':call OpenTerminal<cr>', options)
 
 -- Git
 -- see gitsigns.lua
 
+-- LSP
+map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>', options)
+
+-- Telescope
 map('n', '<leader>ft', ':Telescope<cr>', options)
 map('n', '<leader>ff', ':Telescope find_files<cr>', options)
 map('n', '<leader>fb', ':Telescope buffers<cr>', options)
@@ -57,9 +61,9 @@ map('n', '<leader>fg', ':Telescope git_files<cr>', options)
 map('n', '<leader>fr', ':Telescope resume<cr>', options)
 map('n', '<leader>f/', ':Telescope current_buffer_fuzzy_find<cr>', options)
 
-map('n', '<leader>ct', ':ColorizerToggle<cr>', options)
+-- map('n', '<leader>ct', ':ColorizerToggle<cr>', options)
 
-map('n', '<leader>za', ':TZAtaraxis<cr>', options)
+map('n', '<leader>za', ':TZAtaraxis l20 r20<cr>', options)
 map('n', '<leader>zm', ':TZMinimalist<cr>', options)
 
 -- Hop
@@ -71,6 +75,6 @@ map('', 'f', "<cmd>lua require'hop'.hint_char1({ current_line_only = true })<cr>
 map('n', 'j', ':HopWord<cr>', options)
 map('n', 'l', ':HopLine<cr>', options)
 map('n', 'F', ':HopChar1<cr>', options)
-map('n', '/', remove, options)
-map('n', '/', ':HopPattern<cr>', options)
+-- map('n', '/', remove, options)
+-- map('n', '/', ':HopPattern<cr>', options)
 

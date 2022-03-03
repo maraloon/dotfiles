@@ -1,5 +1,5 @@
 {
-  "title": "Hard (disable standart keys)",
+  "title": "Soft",
   "rules": [
     {
         "description": "dissable cmd-Q",
@@ -117,13 +117,6 @@
                     }
                 ],
                 "type": "basic"
-            },
-            {
-                "from": {
-                    "key_code": "tab"
-                },
-                "to": [],
-                "type": "basic"
             }
         ]
     },
@@ -144,13 +137,6 @@
                         "key_code": "escape"
                     }
                 ],
-                "type": "basic"
-            },
-            {
-                "from": {
-                    "key_code": "escape"
-                },
-                "to": [],
                 "type": "basic"
             }
         ]
@@ -188,7 +174,15 @@
                         "modifiers":  ["left_option"]
                     }
                 ],
-                "type": "basic"
+                "type": "basic",
+                "conditions": [
+                    {
+                      "type": "frontmost_application_unless",
+                      "bundle_identifiers": [
+                        "^com\\.googlecode\\.iterm2$"
+                      ]
+                  }
+                ]
             }
         ]
     },
@@ -209,13 +203,6 @@
                         "key_code": "delete_forward"
                     }
                 ],
-                "type": "basic"
-            },
-            {
-                "from": {
-                    "key_code": "delete_forward"
-                },
-                "to": [],
                 "type": "basic"
             }
         ]
@@ -240,13 +227,6 @@
                         "key_code": "return_or_enter"
                     }
                 ],
-                "type": "basic"
-            },
-            {
-                "from": {
-                    "key_code": "return_or_enter"
-                },
-                "to": [],
                 "type": "basic"
             }
         ]
@@ -328,34 +308,6 @@
                         "key_code": "right_arrow"
                     }
                 ],
-                "type": "basic"
-            },
-            {
-                "from": {
-                    "key_code": "left_arrow"
-                },
-                "to": [],
-                "type": "basic"
-            },
-            {
-                "from": {
-                    "key_code": "right_arrow"
-                },
-                "to": [],
-                "type": "basic"
-            },
-            {
-                "from": {
-                    "key_code": "up_arrow"
-                },
-                "to": [],
-                "type": "basic"
-            },
-            {
-                "from": {
-                    "key_code": "down_arrow"
-                },
-                "to": [],
                 "type": "basic"
             }
         ]

@@ -31,6 +31,11 @@ require('gitsigns').setup {
     ['n <leader>hS'] = '<cmd>Gitsigns stage_buffer<CR>',
     ['n <leader>hU'] = '<cmd>Gitsigns reset_buffer_index<CR>',
 
+    -- ['n <leader>tb'] = '<cmd>Gitsigns toggle_current_line_blame<CR>',
+    ['n <leader>hd'] = '<cmd>Gitsigns diffthis<CR>',
+    -- ['n <leader>hD'] = '<cmd>lua require"gitsigns".diffthis("~")<CR>',
+    -- ['n <leader>td'] = '<cmd>Gitsigns toggle_deleted<CR>',
+
     -- Text objects
     ['o ih'] = ':<C-U>Gitsigns select_hunk<CR>',
     ['x ih'] = ':<C-U>Gitsigns select_hunk<CR>'

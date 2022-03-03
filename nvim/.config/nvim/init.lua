@@ -3,7 +3,9 @@ require('options')
 require('keymaps')
 require('plugins.treesitter')
 require('plugins.lualine')
-require('plugins.nvim-tree') -- not work 
+require('plugins.nvim-tree')
+require('plugins.chadtree')
+require('plugins.utilsnips')
 require('plugins.nvim-autopairs')
 require('plugins.dashboard')
 require('plugins.telescope')
@@ -16,3 +18,6 @@ require('plugins.autosave')
 
 vim.g.gruvbox_hide_inactive_statusline = true
 vim.cmd('colorscheme gruvbox-flat')
+-- vim.cmd('colorscheme yowish')
+-- vim.cmd('colorscheme everforest')
+-- vim.cmd('colorscheme darcula')

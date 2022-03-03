@@ -3,6 +3,7 @@ require('lualine').setup({
     theme = 'gruvbox-flat',
 	  component_separators = '|',
   	section_separators = { left = '', right = '' },
+    -- disabled_filetypes = {'dashboard'},
   },
   sections = {
     lualine_a = {
